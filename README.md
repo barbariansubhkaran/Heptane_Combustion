@@ -5,6 +5,6 @@ Heptane Spray Combustion using sprayFoam solver.
 
 Commands:- 
 
-.decomposePar -force 
++ decomposePar -force 
 
-.foamJob -parallel -screen sprayFoam
++ foamJob -parallel -screen sprayFoam
