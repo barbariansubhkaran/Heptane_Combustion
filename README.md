@@ -1,10 +1,10 @@
 # Heptane_Combustion
-Heptane Combustion using SprayFOAM
+## Heptane Combustion using SprayFOAM
 
-Heptane Spray Combustion using sprayFoam solver.
+### Heptane Spray Combustion using sprayFoam solver.
 
-Commands:- 
++ Commands:-
 
-+ decomposePar -force 
+ decomposePar -force
 
-+ foamJob -parallel -screen sprayFoam
+ foamJob -parallel -screen sprayFoam

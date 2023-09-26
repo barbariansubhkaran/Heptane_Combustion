@@ -77,3 +77,10 @@ functions
 		log	true;
 	}
 }
+
+libs
+(
+    "libchemistryModel_DLB.so"
+    "libODE_DLB.so"
+    "/home/gagan/Videos/lib/build/libc_pyjac.so"
+);
