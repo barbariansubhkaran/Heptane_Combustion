@@ -1,0 +1,27 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Set number of cores
+# typically for STANDALONE, otherwise fetch from sbatch job or assign manually
+N_PROCS=$(grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}')
+foamDictionary -entry numberOfSubdomains system/decomposeParDict -set $N_PROCS
+
+# Set application name
+#application=$(getApplication)
+
+runApplication blockMesh
+
+for i in 1
+do
+  topoSet -dict system/topoSetDict_${i} | tee log.topoSet_${i}
+  refineMesh -dict system/refineMeshDict -overwrite | tee log.refineMesh_${i}
+done
+
+#runApplication decomposePar -force
+#runParallel $application
+#runApplication reconstructPar
+
+#------------------------------------------------------------------------------

@@ -12,6 +12,7 @@ solution
 	coupled	true;
 	averagingMethod	basic;
 	transient	true;
+	maxCo	0.3;
 	cellValueSourceCorrection	false;
 	sourceTerms
 	{
@@ -68,11 +69,11 @@ subModels
 			massFlowRate	0.0;
 			parcelBasisType	mass;
 			UMag	100.0;
-			position	(0.001 0.001 0.001);
 			innerDiameter	0.0;
 			injectionMethod	disc;
 			flowType	constantVelocity;
-			direction	(1.0 1.0 0.35);
+			position          (0.001 0.0 0.0);
+			direction       (1 0 0);
 			sizeDistribution
 			{
 				type	RosinRammler;
@@ -89,7 +90,7 @@ subModels
 	compositionModel	singlePhaseMixture;
 	singlePhaseMixtureCoeffs
 	{
-		phases	
+		phases
 		(
 			liquid
 			{
@@ -126,18 +127,15 @@ subModels
 	patchInteractionModel	localInteraction;
 	localInteractionCoeffs
 	{
-		patches	
+		patches
 		(
-			symmetry
-			{
-				type	rebound;
-			}
-			cylinder
+			walls
 			{
 				type	rebound;
 				e	1.0;
 				mu	0.0;
 			}
+
 		);
 	}
 	liquidEvaporationBoilCoeffs

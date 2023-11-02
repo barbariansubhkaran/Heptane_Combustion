@@ -11,11 +11,7 @@ dimensions	[0 0 0 1 0 0 0];
 internalField	uniform 800.0;
 boundaryField
 {
-	symmetry
-	{
-		type	symmetry;
-	}
-	cylinder
+	walls
 	{
 		type	zeroGradient;
 	}

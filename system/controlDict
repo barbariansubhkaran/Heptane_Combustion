@@ -6,24 +6,63 @@ FoamFile
 	object	controlDict;
 	version	2.0;
 }
+/*
 adjustTimeStep	false;
 application	sprayFoam;
-deltaT	5e-06;
+deltaT	5e-08;
 endTime	5e-03;
-maxCo	2;
-maxDeltaT	1;
+maxCo	2.0;
+maxDeltaT	1.0;
 purgeWrite	0;
 startFrom	latestTime;
 startTime	0;
 stopAt	endTime;
 timeFormat	general;
-timePrecision	6;
+timePrecision	9;
 writeControl	adjustableRunTime;
 writeInterval	5e-05;
 writePrecision	7;
 runTimeModifiable	true;
 compression	uncompressed;
 writeFormat	binary;
+*/
+
+
+application     sprayFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         0.00070005; //1.5e-3;
+
+deltaT          5e-8; //1e-7;
+
+writeControl    adjustableRunTime;
+
+writeInterval   5e-5;
+
+purgeWrite      0;
+
+writeFormat     binary;
+
+writePrecision  9;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   9;
+
+adjustTimeStep  no; //yes;
+
+maxCo           0.5;
+
+maxDeltaT	1e-6;
+
+runTimeModifiable yes;
 libs	("libfvMotionSolvers.so" "libturbulenceModels.so" "libturbulenceModelSchemes.so");
 functions
 {
@@ -77,10 +116,3 @@ functions
 		log	true;
 	}
 }
-
-libs
-(
-    "libchemistryModel_DLB.so"
-    "libODE_DLB.so"
-    "/home/gagan/Videos/lib/build/libc_pyjac.so"
-);

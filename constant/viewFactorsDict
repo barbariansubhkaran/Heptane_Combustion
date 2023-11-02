@@ -13,11 +13,11 @@ maxDynListLength	1000000;
 facesPerCluster	5;
 cylinder
 {
-	nFacesInCoarsestLevel	1043;
+	nFacesInCoarsestLevel	2041;
 	featureAngle	20.0;
 }
 symmetry
 {
-	nFacesInCoarsestLevel	392;
+	nFacesInCoarsestLevel	444;
 	featureAngle	20.0;
 }

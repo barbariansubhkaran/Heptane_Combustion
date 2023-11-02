@@ -16,12 +16,14 @@ thermoType
 	specie	specie;
 	energy	sensibleEnthalpy;
 }
-#include "/home/gagan/Videos/foam/species.foam"
-#include "/home/gagan/Videos/foam/thermo.foam"
+CHEMKINFile	"$FOAM_CASE/chemkin/chem.inp";
+CHEMKINThermoFile	"$FOAM_CASE/chemkin/therm.dat";
+CHEMKINTransportFile	"$FOAM_CASE/chemkin/transportProperties";
+newFormat	yes;
 inertSpecie	N2;
 liquids
 {
-	     
+	C7H16
 	{
 		defaultCoeffs	yes;
 	}

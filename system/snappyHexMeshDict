@@ -21,7 +21,7 @@ geometry
 }
 castellatedMeshControls
 {
-	locationInMesh	(0.01 0.01 0.007);
+	locationInMesh	(0.018 0.016 0.01);
 	refinementSurfaces
 	{
 		cylinder

@@ -15,7 +15,7 @@ boundaryField
 	{
 		type	symmetry;
 	}
-	cylinder
+	walls
 	{
 		type	compressible::alphatJayatillekeWallFunction;
 		value	uniform 0.0;

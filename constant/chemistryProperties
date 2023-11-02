@@ -59,5 +59,3 @@ tabulation
 	growPoints	true;
 	maxNumNewDim	10;
 }
-
-#include "/home/gagan/Videos/foam/reactions.foam"
