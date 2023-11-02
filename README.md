@@ -5,6 +5,9 @@
 
 + Commands:-
 
+
+ blockMesh
+
  decomposePar -force
 
  foamJob -parallel -screen sprayFoam
