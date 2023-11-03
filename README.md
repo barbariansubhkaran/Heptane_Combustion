@@ -6,7 +6,7 @@
 + Commands:-
 
 
- blockMesh
+ ./Allrun
 
  decomposePar -force
 
