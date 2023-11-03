@@ -5,9 +5,11 @@
 
 + Commands:-
 
-
+```
  ./Allrun
 
  decomposePar -force
 
  foamJob -parallel -screen sprayFoam
+ 
+```
